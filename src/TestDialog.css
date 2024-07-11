@@ -1,0 +1,150 @@
+.test-dialog {
+  font-weight: 400;
+  font-family: "Manrope", sans-serif;
+  padding: 14px 24px;
+  margin: 0;
+}
+
+.test-dialog .demo-version {
+  padding: 24px 24px 18px 24px;
+  background-color: #F0F4FC;
+  border-radius: 10px 10px 0 0;
+}
+
+.test-dialog .demo-version h1,
+.test-dialog .demo-version p {
+  margin: 0;
+}
+
+.test-dialog .demo-version h1 {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 27.2px;
+  color: #1F4284;
+  margin-bottom: 14px;
+}
+
+.test-dialog .demo-version p {
+  font-size: 13px;
+  line-height: 20.8px;
+  color: #727272;
+  margin-bottom: 18px;
+}
+
+.test-dialog .demo-version button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: #FFFFFF;
+  background-color: #244C98;
+  border-radius: 60px;
+  border: none;
+  padding: 10px 10px 10px 18px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.test-dialog .settings {
+  height: 220px;
+  background-image: url("images/settings-background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0 0 10px 10px;
+}
+
+.test-dialog-item {
+  display: none;
+}
+
+.test-dialog-item.show {
+  display: block;
+}
+
+@media (min-width: 376px) {
+  .test-dialog {
+    padding: 24px;
+  }
+
+  .test-dialog .demo-version {
+    padding: 24px;
+  }
+
+  .test-dialog .demo-version h1 {
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 18px;
+  }
+
+  .test-dialog .demo-version p {
+    font-size: 15px;
+    line-height: 24px;
+    margin-bottom: 24px;
+  }
+
+  .test-dialog .demo-version button {
+    display: flex;
+    align-items: center;
+    justify-content: unset;
+    gap: 19px;
+    width: inherit;
+  }
+
+  .test-dialog .settings {
+    height: 360px;
+  }
+}
+
+@media (min-width: 769px) {
+  .test-dialog {
+    display: flex;
+    padding: 36px 40px;
+  }
+
+  .test-dialog .demo-version {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .test-dialog .demo-version .demo-version-content-wrapper {
+    flex: 0 0 82%;
+  }
+
+  .test-dialog .demo-version h1 {
+    font-size: 26px;
+    line-height: 41.6px;
+  }
+
+  .test-dialog .demo-version p {
+    font-size: 17px;
+    line-height: 27.2px;
+    margin-bottom: 36px;
+  }
+
+  .test-dialog .demo-version button {
+    gap: 48px;
+    padding: 12px 12px 12px 24px;
+  }
+
+  .test-dialog .settings {
+    flex: 1 0 50%;
+    height: 456px;
+    border-radius: 0 10px 10px 0;
+  }
+}
+
+@media (min-width: 1441px) {
+  .test-dialog .demo-version h1 {
+    font-size: 30px;
+    line-height: 48px;
+  }
+
+  .test-dialog .demo-version .demo-version-content-wrapper {
+    flex: 0 0 55%;
+  }
+}
