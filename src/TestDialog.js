@@ -1,4 +1,3 @@
-
 function showDialog(dialogHtmlContent) {
   const dialog = document.querySelector('.test-dialog-item');
   dialog.innerHTML = dialogHtmlContent;
@@ -11,12 +10,12 @@ function hideDialog() {
 }
 
 function onTryFreeClick() {
-  showDialog('<span>123</span>')
+  // TODO: Need rework this. For now we ignore duplicated ids.
+  const dialogContent = document.querySelector('.test-dialog-item-content')
+  showDialog(dialogContent.outerHTML)
 }
 
-(function () {
-  document.addEventListener("DOMContentLoaded", function () {
-    const button = document.querySelector('.demo-version button');
-    button.addEventListener('click', onTryFreeClick)
-  });
-})()
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.querySelector('.demo-version button');
+  button.addEventListener('click', onTryFreeClick)
+});

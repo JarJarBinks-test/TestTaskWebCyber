@@ -1,6 +1,10 @@
+body {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+}
+
 .test-dialog {
   font-weight: 400;
-  font-family: "Manrope", sans-serif;
   padding: 14px 24px;
   margin: 0;
 }
@@ -57,11 +61,124 @@
 }
 
 .test-dialog-item {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: none;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: brightness(0.5);
 }
 
 .test-dialog-item.show {
   display: block;
+}
+
+.test-dialog-item-content {
+  width: calc(100% - 48px);
+  height: auto;
+  padding: 24px;
+
+  display: none;
+}
+
+.test-dialog-item .content-header {
+  display: flex;  
+}
+
+.test-dialog-item .content-header .close-form {
+  padding: 14px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  margin-left: auto;
+  border: none;
+  cursor: pointer;
+}
+
+.test-dialog-item .test-dialog-item-content {
+  display: inherit;
+  background-color: #F0F4FC;
+}
+
+.test-dialog-item .test-dialog-item-content .content-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.test-dialog-item .test-dialog-item-content h2 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32.75px;
+  color: #323232;
+  margin: 0 0 18px 0;
+}
+
+.test-dialog-item .test-dialog-item-content input[type="text"] {
+  border-radius: 10px;
+  padding: 24px;
+  border: none;
+  background-color: #D7E2F6;
+}
+
+.test-dialog-item .test-dialog-item-content input[type="text"],
+.test-dialog-item .test-dialog-item-content input[type="text"]::placeholder {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24.59px;
+  color: #1F4284;
+}
+
+.test-dialog-item .test-dialog-item-content .user {
+  margin-bottom: 4px;
+}
+
+.test-dialog-item .test-dialog-item-content .password {
+  margin-bottom: 24px;
+}
+
+.test-dialog-item .test-dialog-item-content label {
+  font-size: 18px;
+  line-height: 24.59px;
+  color: #323232;
+  margin-bottom: 24px;
+}
+
+.test-dialog-item .test-dialog-item-content input[type="checkbox"] {
+  margin-right: 14px;
+  scale: 1.4; /* TODO: Need stylize checkbox. (Border)*/
+}
+
+.test-dialog-item .test-dialog-item-content .repair {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 27.32px;
+  color: #244C98;
+  margin-bottom: 36px;
+}
+
+.test-dialog-item .test-dialog-item-content .login,
+.test-dialog-item .test-dialog-item-content .register {
+  border-radius: 4px;
+  padding: 18px 12px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28.8px;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.test-dialog-item .test-dialog-item-content .login {  
+  background-color: #244C98;
+  color: #FFFFFF;  
+  margin-bottom: 4px;
+}
+
+.test-dialog-item .test-dialog-item-content .register {
+  border: 1px solid #244C98;
+  background-color: #F0F4FC;
+  color: #244C98;
 }
 
 @media (min-width: 376px) {
@@ -136,6 +253,14 @@
     height: 456px;
     border-radius: 0 10px 10px 0;
   }
+
+  .test-dialog-item-content {
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 @media (min-width: 1441px) {
@@ -145,6 +270,6 @@
   }
 
   .test-dialog .demo-version .demo-version-content-wrapper {
-    flex: 0 0 55%;
+    flex: 0 0 60%;
   }
 }
